@@ -1,7 +1,7 @@
 # A complete guide to setting up Master and Slave (or multiple) Datasources in Spring
 A tutorial explaining how to work with multiple datasources in Spring.
 
-Step by step guide here.
+Step by step guide [here](https://medium.com/@abhinavjain0809/a-complete-guide-to-setting-up-multiple-datasources-in-spring-8296d4ff0935 "Medium article")
 
 ## Running this project in local
 
@@ -33,3 +33,5 @@ Read data from slave (DataSource 2)
 ```curl 'http://localhost:8080/books/find/slave'```
 
 This will not return any data.
+
+Please note that we have not set up the actual master-slave replication logic here so as to show that we are in fact able to connect to multiple data sources. In real-life applications, once the master receives some data, it will be replicated to the slave database in almost real-time. So, the data written to the master database will be available on the slave database as well.
